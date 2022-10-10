@@ -101,6 +101,8 @@ void DrawHeart(char n)
             printf("绘制完成,按任意键返回主页面！");
             getch();
             break;
+        case '5':
+            break;
         default:
             printf("请输入有效内容");
             getch();
