@@ -102,6 +102,8 @@ void DrawHeart(char n)
             getch();
             break;
         default:
+            printf("请输入有效内容");
+            getch();
             break;
         }
 }
@@ -111,7 +113,7 @@ int main()
     system("chcp 65001");
     system("cls");
     
-    char n;
+    char n = '0';
     for (int i = 1; i <= 50; i++)
     {
         SetColor(0, 14);
@@ -124,7 +126,7 @@ int main()
     printf("\b\n加载完成!即将进入:");
     Sleep(2000);
     system("cls");
-    do
+    while (n != '5')
     {
         system("color 0E");
         for (int i = 0; i <= 56; i++)
@@ -177,10 +179,9 @@ int main()
         }
         printf("\n\t\t\t");
         srand(time(NULL));
-        scanf("%c", &n);
-        getch();
+        n = getch();
         system("cls");
         DrawHeart(n);
         system("cls");
-    } while (n != '5');
+    }
 }
